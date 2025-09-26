@@ -36,7 +36,7 @@ if (!prefersReducedMotion && 'IntersectionObserver' in window) {
   );
 
   document.querySelectorAll('.reveal').forEach((element, index) => {
-    const delay = 60 + index * 60;
+    const delay = 40 + index * 45;
     element.style.transitionDelay = `${delay}ms`;
     observer.observe(element);
   });
