@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Jost:wght@400;500;600;700&display=swap');
+
+:root {
+  color-scheme: light;
+  font-family: 'Jost', 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --color-text: #202020;
+  --color-background: #f4f7f3;
+}
+
+body.static-page {
+  margin: 0;
+  font-family: 'Jost', 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: var(--color-background);
+  color: var(--color-text);
+  min-height: 100vh;
+}
+
+.static-page .section {
+  padding: clamp(3rem, 8vw, 5rem) 0;
+}
+
+.static-page .container {
+  width: min(calc(100% - 48px), 720px);
+  margin: 0 auto;
+}
+
+.static-page h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin-bottom: 1.5rem;
+}
+
+.static-page h2 {
+  margin-top: 2rem;
+  font-size: 1.5rem;
+}
+
+.static-page p,
+.static-page li {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.static-page ul {
+  padding-left: 1.25rem;
+}
+
+.static-page a {
+  color: #005311;
+}
