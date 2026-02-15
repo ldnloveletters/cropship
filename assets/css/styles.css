@@ -9,8 +9,8 @@
   --color-text-muted: #4a4a4a;
   --color-divider: #d6ded2;
   --header-height: 72px;
-  --max-width: 1360px;
-  --page-gutter: clamp(32px, 7vw, 120px);
+  --max-width: 1600px;
+  --page-gutter: clamp(24px, 5vw, 96px);
   --radius-large: 24px;
   --radius-medium: 16px;
   --radius-small: 10px;
@@ -51,6 +51,7 @@ a:not(.button):focus-visible {
 
 img {
   max-width: 100%;
+  height: auto;
   display: block;
 }
 
@@ -261,7 +262,7 @@ p {
 
 .hero__grid {
   display: grid;
-  gap: 80px;
+  gap: clamp(40px, 6vw, 80px);
   align-items: center;
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
@@ -460,21 +461,28 @@ p {
   padding: 0;
   display: grid;
   gap: 1.25rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  justify-items: center;
 }
 
 .logo-list li {
-  padding: 1rem 1.5rem;
+  width: min(100%, 340px);
+  padding: 1.25rem 1.5rem;
   background: #ffffff;
   border-radius: var(--radius-medium);
   border: 1px solid #d6ded2;
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 84px;
+  min-height: 110px;
 }
 
 .logo-list img {
-  max-height: 60px;
+  width: auto;
+  height: auto;
+  max-width: clamp(160px, 60%, 260px);
+  max-height: clamp(80px, 18vw, 140px);
+  object-fit: contain;
 }
 
 .site-footer {
